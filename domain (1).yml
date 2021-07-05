@@ -1,0 +1,193 @@
+version: "2.0"
+
+intents:
+  - get_initial_greetings
+  - gdpr_class
+  - cmmi_class
+  - iso_class
+  - goodbye
+  - gdpr_applicability
+  - gdpr_conformance
+  - penalties
+  - requirements
+  - open_question
+  - yes_belong_eu
+  - no_belong_eu
+  - use_data_personal_activity
+  - use_data_nonpersonal_activity
+  - organization_capture_information_yes
+  - organization_capture_information_no
+  - GDPR_Intentionally
+  - not_applicable
+  - yes_fines
+  - no_fines
+  - gdpr_negligence
+  - affected_by_the_infringement
+  - previous_infringements
+  - remedy_the_infringement
+  - supervisory_authority
+  - previously_certified
+  - last_output
+
+
+
+actions:
+  - action_open_question
+
+responses:
+  utter_get_initial_greetings:
+    - text: "Hi! I am your Compliance Assistant. I can help you with the following. Please select one from the given below.?"
+      buttons:
+        - title: "GDPR"
+          payload: '/gdpr_class'
+        - title: "CMMI"
+          payload: '/cmmi_class'
+        - title: "ISO:9001"
+          payload: '/iso_class'
+  utter_gdpr_class:
+    - text: "I would be happy to help you with GDPR. Please select from the categories given below"
+      buttons:
+        - title: "Applicability"
+          payload: '/gdpr_applicability'
+        - title: "Conformance"
+          payload: '/gdpr_conformance'
+        - title: "Penalties"
+          payload: '/penalties'
+        - title: "Requirements"
+          payload: '/requirements'
+        - title: "Any question on GDPR"
+          payload: '/open_question'
+        - title: "Fines"
+          payload:
+  utter_cmmi_class:
+    - text: "Response from cmmi class"
+
+  utter_iso_class:
+    - text: "Response from iso class"
+  utter_gdpr_applicability:
+    - text: "Is your Organization belong to EU region?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_belong_eu'
+        - title: "No"
+          payload: '/no_belong_eu'
+
+  utter_gdpr_conformance:
+    - text: "GDPR_Conformance"
+  utter_penalties:
+    - text: "Penalties"
+  utter_requirements:
+    - text: "Requirements"
+  utter_yes_belong_eu:
+    - text: "Are you using personal data purely for personal or household activity"
+      buttons:
+        - title: "Yes"
+          payload: "/use_data_personal_activity"
+        - title: "No"
+          payload: "/use_data_nonpersonal_activity"
+
+  utter_use_data_personal_activity:
+    - text: "Compliance Not required"
+
+  utter_use_data_nonpersonal_activity:
+    - text: "Compliance required"
+
+  utter_no_belong_eu:
+    - text: "Does your organization capture personal information like, Name, E-mail, Phone number, of people in the EU?"
+      buttons:
+        - title: "Yes"
+          payload: "/organization_capture_information_yes"
+        - title: "No"
+          payload: "/organization_capture_information_no"
+
+  utter_organization_capture_information_yes:
+    - text: "Are you using personal data purely personal or household activity?"
+      buttons:
+        - title: "Yes"
+          payload: "/use_data_personal_activity"
+        - title: "No"
+          payload: "/use_data_nonpersonal_activity"
+
+  utter_organization_capture_information_no:
+    - text: "Compliance Not required"
+
+  utter_get_initial_greetings_fines:
+    - text: "Hi! I am your Compliance Assistant for fines"
+
+  utter_GDPR_Intentionally:
+    - text: "Have you voilated GDPR rules intentionally?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_fines'
+        - title: "No"
+          payload: '/no_fines'
+        - title: 'NA'
+          payload: '/not_applicable'
+
+  utter_gdpr_negligence:
+    - text: "Have you voilated GDPR rules due to negligence?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_fines'
+        - title: "No"
+          payload: '/no_fines'
+        - title: 'NA'
+          payload: '/not_applicable'
+
+  utter_affected_by_the_infringement:
+    - text: "Have firm took any actions to mitigate the damage suffered by people affected by the infringement?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_fines'
+        - title: "No"
+          payload: '/no_fines'
+        - title: 'NA'
+          payload: '/not_applicable'
+
+  utter_previous_infringements:
+    - text: "Have you any relevant previous infringements?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_fines'
+        - title: "No"
+          payload: '/no_fines'
+        - title: 'NA'
+          payload: '/not_applicable'
+
+  utter_remedy_the_infringement:
+    - text: "Have the firm cooperated with the supervisory authority to discover and remedy the infringement?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_fines'
+        - title: "No"
+          payload: '/no_fines'
+        - title: 'NA'
+          payload: '/not_applicable'
+
+  utter_supervisory_authority:
+    - text: "Have the firm, or a designated third party, proactively reported the infringement to the supervisory authority?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_fines'
+        - title: "No"
+          payload: '/no_fines'
+        - title: 'NA'
+          payload: '/not_applicable'
+
+  utter_previously_certified:
+    - text: "Have the firm followed approved codes of conduct or was previously certified?"
+      buttons:
+        - title: "Yes"
+          payload: '/yes_fines'
+        - title: "No"
+          payload: '/no_fines'
+        - title: 'NA'
+          payload: '/not_applicable'
+
+  utter_last_output:
+    - text: "The less severe infringements could result in a fine of up to €10 million, or 2% of the firm’s worldwide annual revenue from the preceding financial year, whichever amount is higher. The maximum penalty is €20 million or 4% of global revenue, whichever is higher"
+
+
+session_config:
+  session_expiration_time: 60
+  carry_over_slots_to_new_session: true

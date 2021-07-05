@@ -1,0 +1,102 @@
+version: "2.0"
+
+nlu:
+- intent: get_initial_greetings
+  examples: |
+    - get_initial_greetings
+
+- intent: gdpr_class
+  examples: |
+    - gdpr_class
+- intent: cmmi_class
+  examples: |
+    - cmmi_class
+- intent: iso_class
+  examples: |
+    - iso_class
+- intent: gdpr_applicability
+  examples: |
+    - gdpr_applicability
+- intent: gdpr_conformance
+  examples: |
+    - gdpr_conformance
+- intent: penalties
+  examples: |
+    - penalties
+
+- intent: requirements
+  examples: |
+    - requirements
+
+- intent: open_question
+  examples: |
+    - open_question
+
+- intent: yes_belong_eu
+  examples: |
+    - yes_belong_eu
+
+
+- intent: no_belong_eu
+  examples: |
+    - no_belong_eu
+
+- intent: use_data_personal_activity
+  examples: |
+    - use_data_personal_activity
+
+- intent: use_data_nonpersonal_activity
+  examples: |
+    - use_data_nonpersonal_activity
+
+- intent: organization_capture_information_yes
+  examples: |
+    - organization_capture_information_yes
+
+- intent: organization_capture_information_no
+  examples: |
+    - organization_capture_information_no
+
+- intent: GDPR_Intentionally
+  example:  |
+    - GDPR_Intentionally
+
+- intent: not_applicable
+  example:  |
+    - not_applicable
+
+- intent: yes_fines
+  example:  |
+    - yes_fines
+
+- intent: no_fines
+  example:  |
+    - no_fines
+
+- intent: gdpr_negligence
+  example:  |
+    - gdpr_negligence
+
+- intent: affected_by_the_infringement
+  example:  |
+    - affected_by_the_infringement
+
+- intent: previous_infringements
+  example:  |
+    - previous_infringements
+
+- intent: remedy_the_infringement
+  example:  |
+    - remedy_the_infringement
+
+- intent: supervisory_authority
+  example:  |
+    - supervisory_authority
+
+- intent: previously_certified
+  example:  |
+    - previously_certified
+
+- intent: last_output
+  example:  |
+    - last_output

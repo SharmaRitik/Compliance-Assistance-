@@ -1,0 +1,148 @@
+version: "2.0"
+
+stories:
+- story: gdpr greetings belong eu yes personal activity
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: gdpr_class
+  - action: utter_gdpr_class
+  - intent: gdpr_applicability
+  - action: utter_gdpr_applicability
+  - intent: yes_belong_eu
+  - action: utter_yes_belong_eu
+  - intent: use_data_personal_activity
+  - action: utter_use_data_personal_activity
+
+- story: gdpr greetings belong eu no personal activity
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: gdpr_class
+  - action: utter_gdpr_class
+  - intent: gdpr_applicability
+  - action: utter_gdpr_applicability
+  - intent: yes_belong_eu
+  - action: utter_yes_belong_eu
+  - intent: use_data_nonpersonal_activity
+  - action: utter_use_data_nonpersonal_activity
+
+- story: gdpr greetings no belong eu yes process personal information personal use
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: gdpr_class
+  - action: utter_gdpr_class
+  - intent: gdpr_applicability
+  - action: utter_gdpr_applicability
+  - intent: no_belong_eu
+  - action: utter_no_belong_eu
+  - intent: organization_capture_information_yes
+  - action: utter_organization_capture_information_yes
+
+- story: gdpr greetings no belong eu yes process personal information non personal use
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: gdpr_class
+  - action: utter_gdpr_class
+  - intent: gdpr_applicability
+  - action: utter_gdpr_applicability
+  - intent: no_belong_eu
+  - action: utter_no_belong_eu
+  - intent: organization_capture_information_no
+  - action: utter_organization_capture_information_no
+
+- story: gdpr greetings no belong eu yes process personal information personal use
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: gdpr_class
+  - action: utter_gdpr_class
+  - intent: gdpr_applicability
+  - action: utter_gdpr_applicability
+  - intent: no_belong_eu
+  - action: utter_no_belong_eu
+  - intent: organization_capture_information_yes
+  - action: utter_organization_capture_information_yes
+  - intent: use_data_personal_activity
+  - action: utter_use_data_personal_activity
+
+- story: fines 1
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: GDPR_Intentionally
+  - action: utter_GDPR_Intentionally
+  - intent: yes_fines
+  - action: utter_yes_fines
+  - intent: last_output
+  - action: utter_last_output
+
+- story: fines 2
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: GDPR_Intentionally
+  - action: utter_GDPR_Intentionally
+  - intent: no_fines
+  - action: utter_no_fines
+  - intent: gdpr_negligence
+  - action: utter_gdpr_negligence
+  - intent: yes_fines
+  - action: utter_yes_fines
+  - intent: affected_by_the_infringement
+  - action: utter_affected_by_the_infringement
+  - intent: yes_fines
+  - action: utter_yes_fines
+
+- story: fines 3
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: GDPR_Intentionally
+  - action: utter_GDPR_Intentionally
+  - intent: no_fines
+  - action: utter_no_fines
+  - intent: gdpr_negligence
+  - action: utter_gdpr_negligence
+  - intent: no_fines
+  - action: utter_no_fines
+  - intent: affected_by_the_infringement
+  - action: utter_affected_by_the_infringement
+  - intent: no_fines
+  - action: utter_yes_fines
+
+- story: fines 4
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: GDPR_Intentionally
+  - action: utter_GDPR_Intentionally
+  - intent: no_fines
+  - action: utter_no_fines
+  - intent: gdpr_negligence
+  - action: utter_gdpr_negligence
+  - intent: no_fines
+  - action: utter_no_fines
+  - intent: affected_by_the_infringement
+  - action: utter_affected_by_the_infringement
+  - intent: yes_fines
+  - action: utter_yes_fines
+
+- story: fines 5
+  steps:
+  - intent: get_initial_greetings
+  - action: utter_get_initial_greetings
+  - intent: GDPR_Intentionally
+  - action: utter_GDPR_Intentionally
+  - intent: no_fines
+  - action: utter_no_fines
+  - intent: gdpr_negligence
+  - action: utter_gdpr_negligence
+  - intent: yes_fines
+  - action: utter_no_fines
+  - intent: affected_by_the_infringement
+  - action: utter_affected_by_the_infringement
+  - intent: no_fines
+  - action: utter_yes_fines
